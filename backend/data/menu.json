@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Grilled Tenderloin Steak",
+    "category": "Main Course",
+    "price": 24.99,
+    "description": "Prime beef tenderloin grilled to your liking, served with truffle mash and seasonal vegetables.",
+    "image": "images/menu-steak.jpg",
+    "available": true
+  },
+  {
+    "id": "2",
+    "name": "Pan-Seared Salmon",
+    "category": "Main Course",
+    "price": 21.5,
+    "description": "Atlantic salmon fillet, lemon-butter sauce, roasted asparagus.",
+    "image": "images/menu-salmon.jpg",
+    "available": true
+  },
+  {
+    "id": "3",
+    "name": "Signature Grand Burger",
+    "category": "Fast Bites",
+    "price": 14.0,
+    "description": "Wagyu beef patty, aged cheddar, caramelized onion, brioche bun.",
+    "image": "images/menu-burger.jpg",
+    "available": true
+  },
+  {
+    "id": "4",
+    "name": "Truffle Mushroom Risotto",
+    "category": "Vegetarian",
+    "price": 17.75,
+    "description": "Creamy arborio rice, wild mushrooms, shaved parmesan, black truffle oil.",
+    "image": "images/menu-risotto.jpg",
+    "available": true
+  },
+  {
+    "id": "5",
+    "name": "Chocolate Lava Cake",
+    "category": "Dessert",
+    "price": 9.5,
+    "description": "Warm dark chocolate cake with a molten center, vanilla bean ice cream.",
+    "image": "images/menu-dessert.jpg",
+    "available": true
+  },
+  {
+    "id": "6",
+    "name": "Grand Dima Breakfast Platter",
+    "category": "Breakfast",
+    "price": 12.25,
+    "description": "Eggs your way, smoked salmon, avocado, artisan bread, fresh fruit.",
+    "image": "images/menu-breakfast.jpg",
+    "available": true
+  }
+]

@@ -1,0 +1,60 @@
+/* contact.css */
+
+.contact-section { padding: 160px 0 120px; position: relative; }
+.contact-section .glow-1 { width: 480px; height: 480px; background: var(--burgundy); bottom: -160px; left: -160px; opacity: 0.45; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 46px;
+  position: relative;
+}
+
+.contact-info { padding: 44px 38px; }
+.contact-info h2 { font-size: 1.9rem; margin: 10px 0 16px; }
+.contact-info p { color: var(--text-muted); margin-bottom: 30px; }
+
+.contact-detail { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+.contact-detail .icon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(201,161,90,0.12);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-light);
+}
+.contact-detail strong { display: block; font-size: 0.92rem; }
+.contact-detail span { color: var(--text-muted); font-size: 0.86rem; }
+
+.contact-social { display: flex; gap: 12px; margin-top: 30px; }
+
+.contact-form-panel { padding: 44px 40px; }
+.contact-form-panel .eyebrow { display: block; margin-bottom: 8px; }
+.contact-form-panel h2 { font-size: 1.7rem; margin-bottom: 26px; }
+
+.contact-form { display: grid; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-field label { display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.form-field input, .form-field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.04);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+}
+.form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--gold); }
+.form-field textarea { resize: vertical; min-height: 130px; }
+
+.contact-submit { justify-content: center; width: 100%; margin-top: 6px; }
+
+.contact-feedback { margin-top: 8px; font-size: 0.9rem; min-height: 20px; }
+.contact-feedback.success { color: #8fd19e; }
+.contact-feedback.error { color: #e08a8a; }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-info, .contact-form-panel { padding: 32px 22px; }
+}

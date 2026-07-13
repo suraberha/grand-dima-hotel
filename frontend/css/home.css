@@ -1,0 +1,189 @@
+/* home.css — only Home-page-specific styling. Shared stuff is in style.css */
+
+/* ---- Hero ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 110px;
+  overflow: hidden;
+}
+
+.hero .glow-1 { width: 520px; height: 520px; background: var(--gold); top: -180px; left: -160px; }
+.hero .glow-2 { width: 420px; height: 420px; background: var(--burgundy); bottom: -140px; right: -100px; opacity: 0.5; }
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-panel {
+  padding: 56px 48px;
+}
+
+.hero-panel .eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.eyebrow-bar { width: 3px; height: 26px; background: var(--gold); border-radius: 3px; }
+
+.hero-title {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  color: var(--cream);
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--gold-light);
+  display: block;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  margin: 22px 0 32px;
+  max-width: 420px;
+}
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+
+.hero-hours {
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 26px;
+}
+.hero-hours div h5 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.hero-hours div p { font-size: 0.86rem; color: var(--text-muted); }
+
+.hero-image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+}
+.hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.hero-image-wrap::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(21,17,13,0) 40%, rgba(21,17,13,0.75) 100%);
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  z-index: 2;
+  padding: 16px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.hero-badge .star { color: var(--gold); font-size: 1.4rem; }
+.hero-badge strong { display: block; font-family: var(--font-display); }
+.hero-badge span { font-size: 0.78rem; color: var(--text-muted); }
+
+.scroll-cue {
+  position: absolute;
+  bottom: 26px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.scroll-cue .line { width: 1px; height: 34px; background: linear-gradient(var(--gold), transparent); animation: scrollPulse 1.8s ease-in-out infinite; }
+@keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+/* ---- Highlights (Luxury food / Rooms / Free wifi) --------------------- */
+.highlights { padding: 120px 0 40px; position: relative; }
+.highlights-head { text-align: center; max-width: 620px; margin: 0 auto 60px; }
+.highlights-head .section-lede { margin: 0 auto; }
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.highlight-card {
+  padding: 40px 32px;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+.highlight-card:hover { transform: translateY(-8px); border-color: var(--gold); }
+
+.highlight-icon {
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: rgba(201,161,90,0.12);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-light);
+  margin-bottom: 22px;
+}
+.highlight-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.highlight-card p { color: var(--text-muted); font-size: 0.94rem; }
+
+/* ---- Rooms preview ------------------------------------------------------ */
+.rooms { padding: 120px 0; }
+.rooms-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.room-card { overflow: hidden; }
+.room-image { aspect-ratio: 4/3; overflow: hidden; }
+.room-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.room-card:hover .room-image img { transform: scale(1.08); }
+.room-body { padding: 24px; }
+.room-body .room-price { color: var(--gold-light); font-family: var(--font-display); font-size: 1.15rem; margin-top: 6px; }
+.room-body h3 { font-size: 1.2rem; }
+.room-body p { color: var(--text-muted); font-size: 0.88rem; margin-top: 8px; }
+
+/* ---- CTA band ------------------------------------------------------------ */
+.cta-band {
+  margin: 0 24px;
+  max-width: calc(var(--container) - 48px);
+  margin-inline: auto;
+  padding: 70px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
+.cta-band p { color: var(--text-muted); max-width: 480px; margin: 0 auto 30px; }
+.cta-band .btn-primary { margin: 0 auto; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-panel { padding: 40px 8px; }
+  .hero-image-wrap { order: -1; aspect-ratio: 16/10; }
+  .highlight-grid, .room-grid { grid-template-columns: 1fr; }
+  .hero-hours { gap: 22px; }
+}
